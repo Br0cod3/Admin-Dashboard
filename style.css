@@ -67,3 +67,7 @@
 .branding span {
     justify-self: start;
 }
+
+img[src$=".svg"] {
+    filter: invert(1);
+}
