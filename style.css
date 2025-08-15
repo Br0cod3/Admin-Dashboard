@@ -17,6 +17,10 @@
     --test-white: #FFFFFF;
 }
 
+body {
+    font-family: Roboto, sans-serif;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -29,7 +33,7 @@
     grid-row: span 2;
     background-color: var(--test-blue);
     display: grid;
-    grid-template-rows: 1fr 3fr 4fr;
+    grid-template-rows: 1fr 3fr 5fr;
 }
 
 .header {
@@ -41,10 +45,19 @@
     background-color: green;
 }
 
-.navigation,
 .dashboard {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.navigation,
+.branding {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -54,12 +67,6 @@
 
 .branding {
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(3, 30px);
-    justify-content: center;
-    justify-items: center;
-    color: white;
 }
 
 .navigation span,
@@ -70,4 +77,23 @@
 
 img[src$=".svg"] {
     filter: invert(1);
+    width: 1.3em;
+    height: 1.3em;
+}
+
+#dash {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.dashboard img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.navigation,
+.branding {
+    font-size: 12px;
+    font-weight: 550;
 }
