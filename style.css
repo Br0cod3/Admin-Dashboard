@@ -16,6 +16,7 @@
     --test-blue: #178ED6;
     --test-white: #FFFFFF;
     --btn: #1992D4;
+    --side-bar: #F2AE2E;
 }
 
 body {
@@ -146,6 +147,7 @@ img.dark {
     display: grid;
     grid-template-columns: 50px 100px;
     padding-left: 50px;
+    padding-bottom: 10px;
     align-content: start;
     column-gap: 10px;
 }
@@ -257,4 +259,40 @@ div[class^="board"] {
 .announcements {
     position: relative;
     top: 8px;
+}
+
+/*Boards*/
+
+.board1,
+.board2,
+.board3,
+.board4,
+.board5,
+.board6 {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    column-gap: 15px;
+}
+
+.board1-content,
+.board2-content,
+.board3-content,
+.board4-content,
+.board5-content,
+.board6-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 15px 10px 0px;
+}
+
+.board-icons {
+    align-self: flex-end;
+}
+
+.side-bar {
+    background-color:var(--side-bar);
+    border-radius: 20px 0px 0px 20px;
 }
