@@ -290,6 +290,8 @@ div[class^="board"] {
 
 .board-icons {
     align-self: flex-end;
+    display: flex;
+    gap: 20px;
 }
 
 .side-bar {
