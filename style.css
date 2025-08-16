@@ -308,3 +308,33 @@ div[class^="board"] {
 .news-p {
     font-size: 0.6rem;
 }
+
+/*TRENDING*/
+
+.side-board2 {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    padding: 15px;
+}
+
+.side-board2 > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.tag-info {
+    display: grid;
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    align-self: center;
+}
+
+.quote {
+    font-size: 0.7rem;
+    font-weight: 450;
+    font-style: italic;
+}
