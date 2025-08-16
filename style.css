@@ -45,7 +45,9 @@ body {
 }
 
 .main {
-    background-color: green;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    background-color: lightgray;
 }
 
 .dashboard {
@@ -122,11 +124,6 @@ img.dark {
     width: 1.3em;
     height: 1.3em;
 }
-
-/* .header > * {
-    background-color: orangered;
-    border: 1px solid black;
-} */
 
 .search-bar {
     display: grid;
@@ -215,4 +212,49 @@ button {
 
 .huge {
     font-weight: 900;
+}
+
+.projects {
+    display: grid;
+    grid-template: 1.5rem repeat(3, 1fr)/ 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.projects > p {
+    grid-column: 1 / span 2;
+    align-self: end;
+    position: relative;
+    top: 8px;
+}
+
+.projects > div {
+    background-color: white;
+}
+
+div[class^="board"] {
+    border-radius: 10px;
+}
+
+.left-panel {
+    display: grid;
+    grid-template-rows: 1.5rem 1fr 1.5rem 1fr;
+    padding: 20px 20px 20px 0px;
+    gap: 15px;
+}
+
+.left-panel > div {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.trending,
+.announcements {
+    align-self: end;
+}
+
+.trending,
+.announcements {
+    position: relative;
+    top: 8px;
 }
