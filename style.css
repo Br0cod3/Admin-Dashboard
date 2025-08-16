@@ -15,6 +15,7 @@
     --border: #252A2E;
     --test-blue: #178ED6;
     --test-white: #FFFFFF;
+    --btn: #1992D4;
 }
 
 body {
@@ -34,10 +35,13 @@ body {
     background-color: var(--test-blue);
     display: grid;
     grid-template-rows: 1fr 3fr 5fr;
+    padding-top: 10px;
 }
 
 .header {
     grid-area: 1 / 2 / 1 / 2;
+    display: grid;
+    grid-template: 1fr 1fr / 4fr 2fr;
 }
 
 .main {
@@ -50,13 +54,14 @@ body {
     justify-content: center;
     justify-items: center;
     align-items: center;
+    align-content: start;
 }
 
 .navigation,
 .branding {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(33px, 1fr));
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -74,7 +79,7 @@ body {
     justify-self: start;
 }
 
-img[src$=".svg"] {
+img[src$=".svg"]:not(.dark) {
     filter: invert(1);
     width: 1.3em;
     height: 1.3em;
@@ -86,7 +91,7 @@ img[src$=".svg"] {
     color: white;
 }
 
-.dashboard img {
+#alien {
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -95,4 +100,119 @@ img[src$=".svg"] {
 .branding {
     font-size: 0.9rem;
     font-weight: 550;
+}
+
+input {
+    width: 45vw;
+    height: 1.3rem;
+    border-radius: 10px;
+    border: none;
+    padding-left: 8px;
+    background-color: lightgray;   
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 0 0 4px blue;
+    background-color: rgb(211, 211, 211, 0.4);
+    outline: none;
+}
+
+img.dark {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+/* .header > * {
+    background-color: orangered;
+    border: 1px solid black;
+} */
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.user-profile {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    column-gap: 18px;
+    white-space: nowrap;
+}
+
+.user-main {
+    display: grid;
+    grid-template-columns: 50px 100px;
+    padding-left: 50px;
+    align-content: start;
+    column-gap: 10px;
+}
+
+.text-content {
+    display: grid;
+    white-space: nowrap;
+}
+
+.action-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+    align-content: center;
+}
+
+#gojo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+#gojo-big {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+img[alt="notifications"] {
+    justify-self: end;
+}
+
+.user-profile p {
+    justify-self: start;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+button {
+    height: 1.7rem;
+    width: 5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--btn);
+    color: white;
+    font-weight: 550;
+    font-size: 0.7rem;
+}
+
+.mid {
+    justify-self: center;
+}
+
+.srt {
+    justify-self: end;
+}
+
+.small {
+    font-size: 0.7rem;
+    font-weight: 800;
+    align-self: end;
+}
+
+.huge {
+    font-weight: 900;
 }
